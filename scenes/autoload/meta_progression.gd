@@ -33,7 +33,6 @@ func add_meta_upgrade(upgrade: MetaUpgrade):
 	
 	save_data["meta_upgrades"][upgrade.id]["quantity"] += 1
 	save()
-	print(save_data)
 
 
 func get_upgrade_count(upgrade_id: String):

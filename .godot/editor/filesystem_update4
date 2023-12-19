@@ -48,3 +48,4 @@ res://scenes/components/hit_flash_component.gd
 res://scenes/manager/arena_time_manager.tscn
 res://scenes/main/main.tscn
 res://resources/meta_upgrades/experience_gain.tres
+res://resources/upgrades/anvil_count.tres
