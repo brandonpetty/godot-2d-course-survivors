@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://ddqd3sjvfb0sx"]
+[gd_scene load_steps=13 format=3 uid="uid://ddqd3sjvfb0sx"]
 
 [ext_resource type="PackedScene" uid="uid://ddps3egaq5pos" path="res://scenes/game_object/player/player.tscn" id="1_0ein4"]
 [ext_resource type="PackedScene" uid="uid://bijycfs6uqc1n" path="res://scenes/ui/arena_time_ui.tscn" id="1_3p4a3"]
@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://dn1dmrl166i8j" path="res://scenes/ui/end_screen.tscn" id="4_2dh6r"]
 [ext_resource type="PackedScene" uid="uid://c8idf0rlowofa" path="res://scenes/manager/experience_manager.tscn" id="4_d372p"]
 [ext_resource type="PackedScene" uid="uid://dhd6fsqdldn7l" path="res://scenes/manager/upgrade_manager.tscn" id="6_dv7qg"]
-[ext_resource type="PackedScene" uid="uid://cowaps1hvycl" path="res://scenes/game_object/wizard_enemy/wizard_enemy.tscn" id="7_ijh75"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_07o0i")
@@ -29,7 +28,6 @@ experience_manager = NodePath("../ExperienceManager")
 [node name="ArenaTimeManager" parent="." instance=ExtResource("2_2a5ej")]
 
 [node name="EnemyManager" parent="." node_paths=PackedStringArray("arena_time_manager") instance=ExtResource("1_7yhv2")]
-wizard_enemy_scene = ExtResource("7_ijh75")
 arena_time_manager = NodePath("../ArenaTimeManager")
 
 [node name="ExperienceManager" parent="." instance=ExtResource("4_d372p")]
@@ -47,8 +45,9 @@ layer_0/tile_data = PackedInt32Array(1572905, 393216, 3, 1507369, 0, 4, 1441833,
 [node name="Entities" type="Node2D" parent="." groups=["entities_layer"]]
 y_sort_enabled = true
 
-[node name="Player" parent="Entities" instance=ExtResource("1_0ein4")]
+[node name="Player" parent="Entities" node_paths=PackedStringArray("arena_time_manager") instance=ExtResource("1_0ein4")]
 unique_name_in_owner = true
 position = Vector2(317, 192)
+arena_time_manager = NodePath("../../ArenaTimeManager")
 
 [node name="Foreground" type="Node2D" parent="." groups=["foreground_layer"]]
