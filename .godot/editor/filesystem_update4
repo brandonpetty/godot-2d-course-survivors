@@ -20,3 +20,10 @@ res://scenes/autoload/meta_progression.tscn
 res://scenes/components/vial_drop_component.gd
 res://scenes/components/vial_drop_component.tscn
 res://scenes/game_object/basic_enemy/basic_enemy.tscn
+res://scenes/ui/options_menu.tscn
+res://resources/upgrades/axe.tres
+res://scenes/ui/options_menu.gd
+res://scenes/autoload/music_player.tscn
+res://default_bus_layout.tres
+res://scenes/manager/enemy_manager.tscn
+res://scenes/manager/enemy_manager.gd
